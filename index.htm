@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiya Bagaan | Kirtipur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1b3a1a;
+            --accent: #d4a373;
+            --white: #ffffff;
+            --dark: #121212;
+        }
+
+        body {
+            margin: 0;
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark);
+        }
+
+        /* Hero Background - Aesthetic Tea Image */
+        .main-bg {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1597481499750-3e6b22637e12?q=80&w=2070&auto=format&fit=crop');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--accent); text-transform: uppercase; }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 0.9rem;
+        }
+
+        .about-btn {
+            border: 2px solid var(--accent);
+            padding: 8px 18px;
+            border-radius: 25px;
+        }
+
+        .hero {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; font-weight: 900; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.2rem; color: #eee; margin-bottom: 30px; }
+
+        .order-btn {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 60px 5%;
+            background: #fff;
+            color: #333;
+            text-align: center;
+        }
+
+        .video-box {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        /* Stylish Menu */
+        .menu-container { padding: 80px 5%; background: #1b3a1a; }
+        .menu-title { text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: var(--accent); }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .category-card { background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border-left: 5px solid var(--accent); }
+        .category-card h3 { color: var(--accent); border-bottom: 1px dashed #555; padding-bottom: 10px; margin-bottom: 15px;}
+        .item { display: flex; justify-content: space-between; margin-bottom: 10px; }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 40px 5%;
+            background: #000;
+        }
+        .gallery-grid img { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; transition: 0.4s; }
+        .gallery-grid img:hover { transform: scale(1.03); }
+
+        /* Floating WhatsApp */
+        .wa-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            z-index: 1000;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.8rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-bg">
+    <header>
+        <div class="logo">Chiya Bagaan</div>
+        <nav class="nav-links">
+            <a href="#menu">Menu</a>
+            <a href="#gallery">View Bagaan</a>
+            <a href="#location">Location</a>
+            <a href="#about" class="about-btn">About</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Chiya Bagaan, Kirtipur</h1>
+        <p>A beautiful escape in every cup.</p>
+        <a href="https://wa.me/9779804650880?text=I%20want%20to%20place%20an%20order%20from%20Chiya%20Bagaan" class="order-btn">
+            <i class="fa-brands fa-whatsapp"></i> Order Now
+        </a>
+    </section>
+</div>
+
+<section class="video-section" id="about">
+    <h2>View of Chiya Bagaan</h2>
+    <div class="video-box">
+        <video width="100%" height="100%" controls>
+            <source src="Facebook 1979895496168194(480P_SD).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+<section class="menu-container" id="menu">
+    <h2 class="menu-title">Our Signature Menu</h2>
+    <div class="menu-grid">
+        <div class="category-card">
+            <h3>☕ Tea Varieties</h3>
+            <div class="item"><span>Dudh / Masala Chiya</span></div>
+            <div class="item"><span>Black / Lemon / Ginger</span></div>
+            <div class="item"><span>Honey Lemon / Tulsi / Green</span></div>
+            <div class="item"><span>Butter Tea (Bhote)</span></div>
+        </div>
+        <div class="category-card">
+            <h3>☕ Coffee Bar</h3>
+            <div class="item"><span>Cappuccino / Latte / Mocha</span></div>
+            <div class="item"><span>Espresso / Black Coffee</span></div>
+            <div class="item"><span>Milk / Iced Coffee</span></div>
+        </div>
+        <div class="category-card">
+            <h3>🥟 Snacks & Bites</h3>
+            <div class="item"><span>Momo (Veg/Chicken)</span></div>
+            <div class="item"><span>Chowmein / French Fries</span></div>
+            <div class="item"><span>Pakoda / Samosa / Aloo Chop</span></div>
+            <div class="item"><span>Sel Roti with Achar</span></div>
+        </div>
+        <div class="category-card">
+            <h3>🍞 Breakfast</h3>
+            <div class="item"><span>Sandwich (Egg/Veg/Chicken)</span></div>
+            <div class="item"><span>Omelette Toast / Butter Toast</span></div>
+        </div>
+    </div>
+</section>
+
+<div class="gallery-grid" id="gallery">
+    <img src="Screenshot_2026-02-17-13-34-30-786_com.zhiliaoapp.musically-edit.jpg">
+    <img src="Screenshot_2026-02-17-13-33-52-574_com.zhiliaoapp.musically-edit.jpg">
+    <img src="Screenshot_2026-02-17-13-29-51-438_com.zhiliaoapp.musically-edit.jpg">
+    <img src="Screenshot_2026-02-17-13-26-38-493_com.zhiliaoapp.musically-edit.jpg">
+    <img src="Screenshot_2026-02-17-13-44-25-010_com.zhiliaoapp.musically-edit.jpg">
+    <img src="Screenshot_2026-02-17-13-40-54-110_com.zhiliaoapp.musically-edit.jpg">
+    <img src="Screenshot_2026-02-17-13-39-31-181_com.zhiliaoapp.musically-edit.jpg">
+    <img src="Screenshot_2026-02-17-13-35-35-249_com.zhiliaoapp.musically-edit.jpg">
+</div>
+
+<section id="location" style="padding: 60px 5%; background: #000; text-align: center;">
+    <h2 style="color:var(--accent); margin-bottom: 20px;">Location: Kirtipur</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14131.789182060372!2d85.2758155!3d27.681816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18080f4f9f7d%3A0xc3b5e406367373!2sKirtipur!5e0!3m2!1sen!2snp!4v1700000000000" width="100%" height="350" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<footer style="padding: 40px; text-align:center; background: #111; font-size: 0.9rem;">
+    <p>Contact: 9804650880 | Chiya Bagaan, Kirtipur</p>
+    <p style="color: #555; margin-top: 10px;">Crafted by <strong>NK Digital Services</strong></p>
+</footer>
+
+<a href="https://wa.me/9779804650880" class="wa-float">
+    <i class="fa-brands fa-whatsapp"></i> Chat with Manager
+</a>
+
+</body>
+</html>
